@@ -1,5 +1,5 @@
 # Diego Lopes Ferreira
-![](Eu - Me - Ich)
+![Eu - Me - Ich](./assets/eu.jpeg)
 ### Don't lose time, [go check it out](https://diegoferreira.herokuapp.com/)
 
 ## Development
