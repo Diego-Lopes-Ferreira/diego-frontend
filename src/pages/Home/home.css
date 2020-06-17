@@ -1,0 +1,42 @@
+:root {
+  --title: #ffffff;
+  --text-main: #ffffff;
+  --text-detail: #ffffff;
+}
+.home {
+  justify-content: center;
+  align-items: center;
+}
+
+.who {
+  width: 80%;
+  margin: auto;
+}
+.who h2 {
+  font-size: 2rem;
+  color: var(--title);
+  margin-bottom: 5vh;
+}
+.who h4 {
+  font-size: 1.2rem;
+  color: var(--text-main);
+}
+.who a {
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.portifolio {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+/* 
+Cool loking text animation: 
+https://codepen.io/dtab428/pen/bRwMeq?__cf_chl_jschl_tk__=f465fa214ff5c91386bd59d2a063d0bc4e1e6ee5-1592424474-0-ASwr_mAyQJ251Y-K0G_Ubz5oWQ1YrDgwlH-o0mDm7KsBRWPLPundqqkpc4RpqtfS0vNkTN_U4LrkmxXqMS5Tq5a-HQJ1c5IXNRQeLFdFMtqY3suamxBnO5GPUy_unn_ov-TsmO4g2SOJngZkdCGZAPDD023-4Kw9400Ok00HGltT2GnKZsoqnisvj-AsSm6yzfO5njEmHlZSULbcUJxkR1llc3H_ooSEuuy3ygNpUyZmqTiDhAD9SuFtW33ggpJU0hwkMIzrpUqaLtfl_oTCWAifsN2kiMIycYukwu30hznvYJEZKCdq8dg-VFl3kPGUn6vTsEDJdo1GqP45fF-v4awRJTwl04X2bdHgNTMn8Pt-
+
+Cool carrousel of cards:
+https://codepen.io/william-goldsworthy/pen/JzVajj
+
+*/
