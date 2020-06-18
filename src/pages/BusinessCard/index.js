@@ -5,25 +5,26 @@ import { ReactComponent as Logo } from './sherlock.svg';
 function BussinesCard() {
   const [userPos, setUserPos] = useState({x:0, y:0});
   function handleMouseMove(e){
-    setUserPos({x: e.nativeEvent.clientX, y: e.nativeEvent.clientY});
-    //console.log('onMouseMove',e.nativeEvent.clientX, e.nativeEvent.clientY);
-    console.log((e.nativeEvent.clientX - (window.innerWidth / 2)) * -0.05)
+    if (window.innerWidth <= 800) {} else {
+      setUserPos({x: e.nativeEvent.clientX, y: e.nativeEvent.clientY});
+    }
   }
   return (
     <div className="business-card">
 
-      <div
-        className="wrapper"
-        onMouseMove={handleMouseMove}>
-        
+      <div className="wrapper" onMouseMove={handleMouseMove}>
         <div className="b-light"></div>
         <div
           className="idk"
-          style={{transform: `translate(${(userPos.x - (window.innerWidth / 2)) * -0.05}px, ${(userPos.y - (window.innerHeight / 2)) * -0.05}px)`}}>
+          style={{transform: `translate(${(userPos.x-(window.innerWidth/2))*-0.05}px, ${(userPos.y-(window.innerHeight/2))*-0.05}px)`}}>
           
           <div class="b-card b-front">
             <div class="b-logo">
-              <Logo fill='#ffffff' width={64} height={64} />
+              <Logo 
+                fill='#ffffff'
+                width={window.innerWidth <= 800 ? 40 : 64}
+                height={window.innerWidth <= 800 ? 40 : 64} />
+
             </div>
             <div class="b-company-text">Sherlock Holmes</div>
           </div>

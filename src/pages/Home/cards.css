@@ -1,6 +1,60 @@
-.cards {
+.home-page .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1vw;
   padding: 1vh 1vw;
+}
+
+.home-page .card {
+  max-width: 400px;
+  height: 100%;
+  margin: auto;
+  padding: 5px;
+  border-radius: 5px;
+  border: 5px solid #ff0000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.home-page .card img {
+  width: 110%;
+  height: auto;
+}
+.home-page .card h3 {
+  font-size: 25px;
+  color: #cccccc;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.home-page .card h4 {
+  font-size: 14px;
+  color: #cccccc;
+  text-align: justify;
+  padding-bottom: 10px;
+}
+.home-page .card a {
+  margin: auto;
+  height: 30px;
+  width: 130px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-page .card a p {
+  margin: auto;
+  text-align: center;
+  color: #333333;
+}
+
+@media (max-width: 800px) {
+  .home-page .cards {
+    grid-template-columns: 1fr;
+  }
+  .home-page .card {
+    max-width: 250px;
+    margin: auto;
+  }
 }

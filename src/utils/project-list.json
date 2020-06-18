@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Business Card",
+    "description": "React project where I tested how to work with animations based on mouse movement, and learned how to use masks in CSS. On the example I made a Sherlock Holmes style business card",
+    "link": "/projects/business-card",
+    "photo": "ecoleta-capa.png"
+  },
+  {
+    "title": "Be The Hero",
+    "description": "Project developed by Rocketseat for a ReactJS course. The objective in this project is connect NGOs with people who are willing to make a difference - The Heroes.",
+    "link": "/projects/bethehero",
+    "photo": "ecoleta-capa.png"
+  },
+  {
+    "title": "Ecoleta",
+    "description": "Project developed by Rocketseat for a ReactJS course. The objective in this project is create a network fo recyclable material collection points, so it will be easy to find one next time you need.",
+    "link": "/projects/ecoleta",
+    "photo": "ecoleta-capa.png"
+  },
+  {
+    "title": "Title",
+    "description": "Description, description, description, description, description, description, description, description, description, description, description, description, description.",
+    "link": "/",
+    "photo": "ecoleta-capa.png"
+  }
+
+]

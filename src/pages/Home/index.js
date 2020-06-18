@@ -2,6 +2,9 @@ import React from 'react';
 import './home.css';
 import './cards.css';
 
+import projectList from '../../utils/project-list.json';
+
+
 
 function WhoAmI() {
   return (
@@ -17,23 +20,41 @@ function WhoAmI() {
   );
 }
 
-function Card({ img, title, desc, what}) {
+function Card({ img, title, desc, link}) {
   return (
     <div className="card">
-      <img src="" alt="" />
+      <img src={require('../../assets/ecoleta-capa.png')} alt={title} />
       <h3>{title}</h3>
       <h4>{desc}</h4>
+      <a><p>Check it out</p></a>
     </div>
   );
 }
 
-const descLong1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-const descLong2 = 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
-const descLong3 = 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+function Cards({ projects }) {
+  let c = 0;
+  const cardList = projects.map((project) => {
+    c += 1;
+    return (
+      <Card 
+        key={c}
+        img={project.photo}
+        title={project.title}
+        desc={project.description}
+        link={project.link} />
+    );
+  });
+  return (
+    <div className="cards">
+      {cardList}
+    </div>
+  );
+}
 
 function Home() {
+
   return (
-    <div className="home">
+    <div className="home-page">
       <header></header>
       <div className="cube"></div>
       <WhoAmI />
@@ -42,14 +63,7 @@ function Home() {
         <h4>Some examples of my finished projects and a sample of what I'm working on</h4>
       </div>
 
-      <div className="cards">
-        <Card title='Bom dia' desc={descLong2} />
-        <Card title='Bom dia' desc={descLong1} />
-        <Card title='Bom dia' desc={descLong1} />
-        <Card title='Bom dia' desc={descLong3} />
-        <Card title='Bom dia' desc={descLong2} />
-        <Card title='Bom dia' desc={descLong3} />
-      </div>
+      <Cards projects={projectList} />
     </div>
   );
 }
