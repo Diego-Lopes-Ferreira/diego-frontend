@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './home.css';
 import './cards.css';
 
@@ -11,7 +12,7 @@ function WhoAmI() {
     <div className="who">
       <h2>Diego Lopes Ferreira</h2>
       <h4>Engeneering student at <a href="http://portal.utfpr.edu.br/" target="blank">UTFPR-CP, Brazil </a>
-        Member of software team at <a href="https://www.instagram.com/visionsat.utfpr/" target="blank">VISIONSAT-UTFPR-CP </a>
+        , Member of software team at <a href="https://www.instagram.com/visionsat.utfpr/" target="blank">VISIONSAT-UTFPR-CP </a>
         , <a href="https://www.linkedin.com/company/enactus-cp/" target="blank">ENACTUS-UTFPR-CP </a>
         and trainee at <a href="https://solucaut.com.br/" target="blank">SOLUCAUT </a>
       </h4>
@@ -20,13 +21,28 @@ function WhoAmI() {
   );
 }
 
-function Card({ img, title, desc, link}) {
+function Header() {
   return (
-    <div className="card">
-      <img src={require('../../assets/ecoleta-capa.png')} alt={title} />
-      <h3>{title}</h3>
-      <h4>{desc}</h4>
-      <a><p>Check it out</p></a>
+    <header>
+      <h1>OI</h1>
+    </header>
+  );
+}
+
+function Card({ img, title, desc, link}) {
+  const [focused, setFocus] = useState(false);
+  return (
+    <div
+      className="card"
+      onMouseEnter={() => setFocus(true)}
+      onMouseLeave={() => setFocus(false)}
+      >
+        <div className="img">
+          <img src={require('../../assets/ecoleta-capa.png')} alt={title} />
+        </div>
+        <h3>{title}</h3>
+        <h4>{desc}</h4>
+        {focused ? <Link to={{pathname: link}}><p>Check it out</p></Link> : ""}
     </div>
   );
 }
@@ -52,17 +68,15 @@ function Cards({ projects }) {
 }
 
 function Home() {
-
   return (
     <div className="home-page">
-      <header></header>
+      <Header />
       <div className="cube"></div>
       <WhoAmI />
       <div className="portifolio">
         <h2>Portiofolio</h2>
         <h4>Some examples of my finished projects and a sample of what I'm working on</h4>
       </div>
-
       <Cards projects={projectList} />
     </div>
   );

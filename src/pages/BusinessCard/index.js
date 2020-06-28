@@ -35,9 +35,9 @@ function BussinesCard() {
               <div class="b-role-text"><h3>Consulting Detective</h3></div>
             </div>
             <div class="b-right">
-              <h4><a href="https://isitchristmas.com/">watsonsblog.com</a></h4>
+              <h4><a href='https://isitchristmas.com/'>watsonsblog.com</a></h4>
               <h4><a href='mailto:diego.lopes.ferreira.br@gmail.com'>sherlock@holmes.com</a></h4>
-              <h4><a>221-B Baker Street, London - UK</a></h4>
+              <h4><a href='https://isitchristmas.com/'>221-B Baker Street, London - UK</a></h4>
             </div>
           </div>
         </div>
