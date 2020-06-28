@@ -24,9 +24,17 @@ function WhoAmI() {
 
 function Header() {
   return (
-    <header>
-      <h1>OI</h1>
-    </header>
+    <section className="section">
+      {/* svg wrapper */}
+        {/* svg1 */}
+        {/* svg2 */}
+        {/* svg3 */}
+        {/* svg4 */}
+        {/* svg5 */}
+      {/* svg wrapper */}
+      {/*  */}
+      {/*  */}
+    </section>
   );
 }
 
