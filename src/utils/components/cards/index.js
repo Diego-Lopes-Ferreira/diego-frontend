@@ -42,3 +42,4 @@ function Cards({ projects }) {
 
 
 export default Cards;
+export { Card };

@@ -5,6 +5,8 @@ import './home.css';
 import projectList from '../../utils/project-list.json';
 import Cards from '../../utils/components/cards/index';
 
+var projects = projectList.filter(item => item.main);
+
 
 function WhoAmI() {
   return (
@@ -38,7 +40,7 @@ function Home() {
         <h2>Portiofolio</h2>
         <h4>Some examples of my finished projects and a sample of what I'm working on</h4>
       </div>
-      <Cards projects={projectList} />
+      <Cards projects={projects} />
       <div className="white-space" style={{height: 100}}></div>
     </div>
   );
