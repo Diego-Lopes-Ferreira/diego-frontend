@@ -30,12 +30,12 @@ function Header() {
 }
 
 function Card({ img, title, desc, link}) {
-  const [focused, setFocus] = useState(false);
+  const [focused, setFocus] = useState(true);
   return (
     <div
       className="card"
       onMouseEnter={() => setFocus(true)}
-      onMouseLeave={() => setFocus(false)}
+      onMouseLeave={() => setFocus(true)}
       >
         <div className="img">
           <img src={require('../../assets/ecoleta-capa.png')} alt={title} />
@@ -78,6 +78,7 @@ function Home() {
         <h4>Some examples of my finished projects and a sample of what I'm working on</h4>
       </div>
       <Cards projects={projectList} />
+      <div className="white-space" style={{height: 100}}></div>
     </div>
   );
 }
