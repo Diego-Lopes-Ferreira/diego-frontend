@@ -1,0 +1,43 @@
+.section-wow {
+  height: 100vh;
+  
+}
+
+.section-wow img {
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  width: 100%;
+  height: auto;
+}
+
+.section-wow .svgs-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.section-wow .testeee {
+  animation-name: come-from-left-1;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+.section-wow .testeee svg * {
+  color: #ffffff;
+}
+
+@keyframes come-from-left-1 {
+  0% {
+    transform: translate(-50vw, -50vh);
+    opacity: 0;
+  }
+  /* 70% {
+    transform: translate(-10vw, -10vh);
+  }  */
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
