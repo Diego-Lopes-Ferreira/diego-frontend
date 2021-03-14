@@ -3,7 +3,6 @@ import React from 'react'
 import Head from 'next/head'
 
 //* Images
-import SpacexLogo from '../assets/spacex.svg'
 import { Container } from '../styles/pages'
 
 const Home: React.FC = () => {
@@ -14,12 +13,9 @@ const Home: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
-        <SpacexLogo />
-        <h1>ReactJS template</h1>
+        <h1>It'a me, Mario</h1>
         <p>
-          A ReactJS + Next.js structure made by{' '}
-          <a href="https://rocketseat.com.br">Rocketseat</a> - that I&apos;m
-          copying :)
+          Oi, eu sou o Diego
         </p>
       </Container>
     </div>
